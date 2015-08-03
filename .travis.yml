@@ -3,7 +3,7 @@ services:
 before_script:
   - mongo mydb_test --eval 'db.addUser("travis", "test");'
 before_install:
-  sudo pip install codecov
+  sudo pip install codecov nose
 script:
   nosetests
 after_success:
