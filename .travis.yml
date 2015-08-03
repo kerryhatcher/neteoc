@@ -1,3 +1,7 @@
+services:
+  - mongodb
+before_script:
+  - mongo mydb_test --eval 'db.addUser("travis", "test");'
 before_install:
   pip install codecov
 after_success:
