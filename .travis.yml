@@ -1,9 +1,14 @@
+language: python
+
+python:
+  - 2.7
+
 services:
   - mongodb
 before_script:
   - mongo mydb_test --eval 'db.addUser("travis", "test");'
 before_install:
-  sudo pip install codecov nose
+  pip install codecov nose
 script:
   nosetests
 after_success:
