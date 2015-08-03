@@ -10,4 +10,4 @@ before_install:
 script:
   - nosetests
 after_success:
-  - codecov
+  - codecov --token=$codecovtoken
